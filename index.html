@@ -9,9 +9,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Thu Jun 21 14:30:59 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Practice - Fred Seymour / École Notre-Dame-de-la-Paix</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Thursday Jun 21, 2018 -  6:30PM til  8:00PM</H4>
+         Last Run: Wed Jun 27 12:58:53 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Conditioning / Practice - Fred Seymour / École Notre-Dame-de-la-Paix</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Thursday Jun 28, 2018 -  6:30PM til  8:30PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -30,39 +30,51 @@
                   <tbody>
                      <tr>
                         <td>06:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>10</td>
+                        <td>Chance of a Thunderstorm</td>
+                        <td>16</td>
+                        <td>16</td>
                         <td>39</td>
-                        <td>2</td>
+                        <td>51</td>
+                        <td>1</td>
                         <td>13</td>
-                        <td>WNW</td>
-                        <td>63</td>
+                        <td>W</td>
+                        <td>85</td>
                      </tr>
                      <tr>
                         <td>07:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>7</td>
-                        <td>44</td>
+                        <td>Chance of a Thunderstorm</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>34</td>
+                        <td>53</td>
                         <td>1</td>
                         <td>14</td>
-                        <td>WNW</td>
-                        <td>69</td>
+                        <td>W</td>
+                        <td>86</td>
                      </tr>
                      <tr>
                         <td>08:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>21</td>
-                        <td>21</td>
-                        <td>17</td>
-                        <td>47</td>
+                        <td>Overcast</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>19</td>
+                        <td>58</td>
                         <td>0</td>
+                        <td>13</td>
+                        <td>WSW</td>
+                        <td>84</td>
+                     </tr>
+                     <tr>
+                        <td>09:00 PM</td>
+                        <td>Chance of Rain</td>
                         <td>14</td>
-                        <td>WNW</td>
-                        <td>72</td>
+                        <td>14</td>
+                        <td>32</td>
+                        <td>69</td>
+                        <td>0</td>
+                        <td>11</td>
+                        <td>W</td>
+                        <td>82</td>
                      </tr>
                   </tbody>
                </table>
@@ -97,7 +109,8 @@
            "labels":[
              "06:00 PM",
              "07:00 PM",
-             "08:00 PM"
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
@@ -106,9 +119,10 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "24",
-                 "22",
-                 "21"
+                 "16",
+                 "16",
+                 "15",
+                 "14"
                ]
              },
              {
@@ -117,9 +131,10 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "24",
-                 "22",
-                 "21"
+                 "16",
+                 "16",
+                 "15",
+                 "14"
                ]
              }
            ]
@@ -162,7 +177,8 @@
            "labels":[
              "06:00 PM",
              "07:00 PM",
-             "08:00 PM"
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
@@ -170,9 +186,10 @@
                "strokeColor":"rgba(0,0,255,1)",
                "fillColor":"rgba(0,0,255,0.5)",
                "data":[
-                 "10",
-                 "7",
-                 "17"
+                 "39",
+                 "34",
+                 "19",
+                 "32"
                ]
              },
              {
@@ -180,9 +197,10 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "39",
-                 "44",
-                 "47"
+                 "51",
+                 "53",
+                 "58",
+                 "69"
                ]
              },
              {
@@ -190,9 +208,10 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "63",
-                 "69",
-                 "72"
+                 "85",
+                 "86",
+                 "84",
+                 "82"
                ]
              }
            ]
@@ -203,464 +222,6 @@
                                    };
                   var MyNewChart = new Chart(ctx).BarAlt(data,options);
                   document.getElementById("legend_chartHTMLReportGenerator2").innerHTML=MyNewChart.generateLegend();
-               </script>
-         <img src="http://www.wmiradar.com/alberta/latest_loop.gif"><br/><h4>Weather Radar from Alberta Hail Suppresion Project</h4>
-         <hr style="border-width:5px ">
-      </div>
-      <div style="padding:10px;border: 1px none black">
-         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
-         <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Thu Jun 21 14:30:59 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Academy - OAK 8</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Saturday Jun 23, 2018 - 12:00PM til  1:30PM</H4>
-               <table class="table table-striped">
-                  <thead>
-                     <tr>
-                        <th>Forecast Time</th>
-                        <th>Summary</th>
-                        <th>Temperture (°C)</th>
-                        <th>Feels Like (°C)</th>
-                        <th>POP (%)</th>
-                        <th>Humidity (%)</th>
-                        <th>UV</th>
-                        <th>Wind (km/hr)</th>
-                        <th>Wind Dir.</th>
-                        <th>Cloud Cover (%)</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>11:00 AM</td>
-                        <td>Thunderstorm</td>
-                        <td>17</td>
-                        <td>17</td>
-                        <td>71</td>
-                        <td>74</td>
-                        <td>3</td>
-                        <td>21</td>
-                        <td>NNW</td>
-                        <td>84</td>
-                     </tr>
-                     <tr>
-                        <td>12:00 PM</td>
-                        <td>Chance of a Thunderstorm</td>
-                        <td>18</td>
-                        <td>18</td>
-                        <td>56</td>
-                        <td>68</td>
-                        <td>4</td>
-                        <td>21</td>
-                        <td>NNW</td>
-                        <td>78</td>
-                     </tr>
-                     <tr>
-                        <td>01:00 PM</td>
-                        <td>Chance of a Thunderstorm</td>
-                        <td>19</td>
-                        <td>19</td>
-                        <td>51</td>
-                        <td>66</td>
-                        <td>5</td>
-                        <td>19</td>
-                        <td>NNW</td>
-                        <td>73</td>
-                     </tr>
-                     <tr>
-                        <td>02:00 PM</td>
-                        <td>Chance of a Thunderstorm</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>53</td>
-                        <td>63</td>
-                        <td>5</td>
-                        <td>19</td>
-                        <td>NNW</td>
-                        <td>70</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator3"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator3" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator3").getContext("2d");
-                  var data ={
-           "labels":[
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM",
-             "02:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
-               "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
-               "data":[
-                 "17",
-                 "18",
-                 "19",
-                 "20"
-               ]
-             },
-             {
-               "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
-               "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
-               "data":[
-                 "17",
-                 "18",
-                 "19",
-                 "20"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator3").innerHTML=MyNewChart.generateLegend();
-               </script>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator4" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
-                  var data ={
-           "labels":[
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM",
-             "02:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
-               "data":[
-                 "71",
-                 "56",
-                 "51",
-                 "53"
-               ]
-             },
-             {
-               "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
-               "data":[
-                 "74",
-                 "68",
-                 "66",
-                 "63"
-               ]
-             },
-             {
-               "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
-               "data":[
-                 "84",
-                 "78",
-                 "73",
-                 "70"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator4").innerHTML=MyNewChart.generateLegend();
-               </script>
-         <hr style="border-width:5px ">
-      </div>
-      <div style="padding:10px;border: 1px none black">
-         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
-         <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Thu Jun 21 14:30:59 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Game vs. Foothills 02 DA - CSC Field 2</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Sunday Jun 24, 2018 - 12:00PM til  2:30PM</H4>
-               <table class="table table-striped">
-                  <thead>
-                     <tr>
-                        <th>Forecast Time</th>
-                        <th>Summary</th>
-                        <th>Temperture (°C)</th>
-                        <th>Feels Like (°C)</th>
-                        <th>POP (%)</th>
-                        <th>Humidity (%)</th>
-                        <th>UV</th>
-                        <th>Wind (km/hr)</th>
-                        <th>Wind Dir.</th>
-                        <th>Cloud Cover (%)</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>11:00 AM</td>
-                        <td>Clear</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>0</td>
-                        <td>48</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>SSE</td>
-                        <td>14</td>
-                     </tr>
-                     <tr>
-                        <td>12:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>23</td>
-                        <td>23</td>
-                        <td>15</td>
-                        <td>42</td>
-                        <td>6</td>
-                        <td>10</td>
-                        <td>SE</td>
-                        <td>43</td>
-                     </tr>
-                     <tr>
-                        <td>01:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>15</td>
-                        <td>39</td>
-                        <td>7</td>
-                        <td>10</td>
-                        <td>SSE</td>
-                        <td>41</td>
-                     </tr>
-                     <tr>
-                        <td>02:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>15</td>
-                        <td>40</td>
-                        <td>7</td>
-                        <td>11</td>
-                        <td>SSE</td>
-                        <td>36</td>
-                     </tr>
-                     <tr>
-                        <td>03:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>25</td>
-                        <td>25</td>
-                        <td>15</td>
-                        <td>39</td>
-                        <td>6</td>
-                        <td>14</td>
-                        <td>SSE</td>
-                        <td>34</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator5" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
-                  var data ={
-           "labels":[
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM",
-             "02:00 PM",
-             "03:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
-               "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
-               "data":[
-                 "22",
-                 "23",
-                 "24",
-                 "24",
-                 "25"
-               ]
-             },
-             {
-               "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
-               "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
-               "data":[
-                 "22",
-                 "23",
-                 "24",
-                 "24",
-                 "25"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator5").innerHTML=MyNewChart.generateLegend();
-               </script>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator6"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator6" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator6").getContext("2d");
-                  var data ={
-           "labels":[
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM",
-             "02:00 PM",
-             "03:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
-               "data":[
-                 "0",
-                 "15",
-                 "15",
-                 "15",
-                 "15"
-               ]
-             },
-             {
-               "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
-               "data":[
-                 "48",
-                 "42",
-                 "39",
-                 "40",
-                 "39"
-               ]
-             },
-             {
-               "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
-               "data":[
-                 "14",
-                 "43",
-                 "41",
-                 "36",
-                 "34"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator6").innerHTML=MyNewChart.generateLegend();
                </script>
          <hr style="border-width:5px ">
       </div>
