@@ -9,9 +9,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sat Jul 14 13:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Game vs. WHU Monaco - Rundle College</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Saturday Jul 14, 2018 - 11:30AM til  2:00PM</H4>
+         Last Run: Sat Jul 14 14:05:03 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">World Cup Final Game - Coach Tyler's House - Coach Tyler's</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Sunday Jul 15, 2018 -  9:00AM til  1:00PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -29,16 +29,64 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>02:00 PM</td>
+                        <td>09:00 AM</td>
                         <td>Clear</td>
-                        <td>19</td>
-                        <td>19</td>
+                        <td>16</td>
+                        <td>16</td>
                         <td>0</td>
-                        <td>37</td>
+                        <td>50</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>SW</td>
                         <td>7</td>
-                        <td>10</td>
-                        <td>NNW</td>
+                     </tr>
+                     <tr>
+                        <td>10:00 AM</td>
+                        <td>Clear</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>0</td>
+                        <td>42</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>SW</td>
+                        <td>6</td>
+                     </tr>
+                     <tr>
+                        <td>11:00 AM</td>
+                        <td>Clear</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>36</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>SE</td>
+                        <td>5</td>
+                     </tr>
+                     <tr>
+                        <td>12:00 PM</td>
+                        <td>Clear</td>
                         <td>22</td>
+                        <td>22</td>
+                        <td>0</td>
+                        <td>32</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>ESE</td>
+                        <td>5</td>
+                     </tr>
+                     <tr>
+                        <td>01:00 PM</td>
+                        <td>Clear</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>0</td>
+                        <td>27</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>ESE</td>
+                        <td>9</td>
                      </tr>
                   </tbody>
                </table>
@@ -71,7 +119,11 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
-             "02:00 PM"
+             "09:00 AM",
+             "10:00 AM",
+             "11:00 AM",
+             "12:00 PM",
+             "01:00 PM"
            ],
            "datasets":[
              {
@@ -80,7 +132,11 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "19"
+                 "16",
+                 "18",
+                 "20",
+                 "22",
+                 "23"
                ]
              },
              {
@@ -89,7 +145,11 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "19"
+                 "16",
+                 "18",
+                 "20",
+                 "22",
+                 "23"
                ]
              }
            ]
@@ -130,7 +190,11 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
-             "02:00 PM"
+             "09:00 AM",
+             "10:00 AM",
+             "11:00 AM",
+             "12:00 PM",
+             "01:00 PM"
            ],
            "datasets":[
              {
@@ -138,6 +202,10 @@
                "strokeColor":"rgba(0,0,255,1)",
                "fillColor":"rgba(0,0,255,0.5)",
                "data":[
+                 "0",
+                 "0",
+                 "0",
+                 "0",
                  "0"
                ]
              },
@@ -146,7 +214,11 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "37"
+                 "50",
+                 "42",
+                 "36",
+                 "32",
+                 "27"
                ]
              },
              {
@@ -154,7 +226,11 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "22"
+                 "7",
+                 "6",
+                 "5",
+                 "5",
+                 "9"
                ]
              }
            ]
@@ -166,15 +242,14 @@
                   var MyNewChart = new Chart(ctx).BarAlt(data,options);
                   document.getElementById("legend_chartHTMLReportGenerator2").innerHTML=MyNewChart.generateLegend();
                </script>
-         <img src="http://www.wmiradar.com/alberta/latest_loop.gif">
          <hr style="border-width:5px ">
       </div>
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sat Jul 14 13:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">World Cup Final Game - Coach Tyler's House - Coach Tyler's</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Sunday Jul 15, 2018 -  9:00AM til  1:00PM</H4>
+         Last Run: Sat Jul 14 14:05:03 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Conditioning/Sport Psych - SWU Complex</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Monday Jul 16, 2018 -  6:30PM til  7:30PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -192,64 +267,40 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>09:00 AM</td>
+                        <td>06:00 PM</td>
                         <td>Clear</td>
-                        <td>16</td>
-                        <td>16</td>
+                        <td>29</td>
+                        <td>29</td>
                         <td>0</td>
-                        <td>49</td>
+                        <td>21</td>
                         <td>2</td>
-                        <td>6</td>
-                        <td>SW</td>
-                        <td>7</td>
-                     </tr>
-                     <tr>
-                        <td>10:00 AM</td>
-                        <td>Clear</td>
-                        <td>18</td>
-                        <td>18</td>
-                        <td>0</td>
-                        <td>41</td>
-                        <td>3</td>
-                        <td>6</td>
-                        <td>SSW</td>
-                        <td>7</td>
-                     </tr>
-                     <tr>
-                        <td>11:00 AM</td>
-                        <td>Clear</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td>0</td>
-                        <td>36</td>
-                        <td>4</td>
-                        <td>8</td>
+                        <td>11</td>
                         <td>SE</td>
-                        <td>7</td>
+                        <td>0</td>
                      </tr>
                      <tr>
-                        <td>12:00 PM</td>
+                        <td>07:00 PM</td>
                         <td>Clear</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>0</td>
-                        <td>31</td>
-                        <td>6</td>
-                        <td>8</td>
-                        <td>SE</td>
-                        <td>6</td>
-                     </tr>
-                     <tr>
-                        <td>01:00 PM</td>
-                        <td>Clear</td>
-                        <td>23</td>
-                        <td>23</td>
-                        <td>0</td>
                         <td>28</td>
-                        <td>7</td>
-                        <td>8</td>
+                        <td>28</td>
+                        <td>0</td>
+                        <td>25</td>
+                        <td>1</td>
+                        <td>13</td>
+                        <td>SE</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td>08:00 PM</td>
+                        <td>Clear</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>0</td>
+                        <td>29</td>
+                        <td>0</td>
+                        <td>13</td>
                         <td>ESE</td>
-                        <td>10</td>
+                        <td>0</td>
                      </tr>
                   </tbody>
                </table>
@@ -282,11 +333,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator3").getContext("2d");
                   var data ={
            "labels":[
-             "09:00 AM",
-             "10:00 AM",
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM"
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -295,11 +344,9 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "16",
-                 "18",
-                 "20",
-                 "22",
-                 "23"
+                 "29",
+                 "28",
+                 "27"
                ]
              },
              {
@@ -308,11 +355,9 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "16",
-                 "18",
-                 "20",
-                 "22",
-                 "23"
+                 "29",
+                 "28",
+                 "27"
                ]
              }
            ]
@@ -353,11 +398,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
                   var data ={
            "labels":[
-             "09:00 AM",
-             "10:00 AM",
-             "11:00 AM",
-             "12:00 PM",
-             "01:00 PM"
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -365,8 +408,6 @@
                "strokeColor":"rgba(0,0,255,1)",
                "fillColor":"rgba(0,0,255,0.5)",
                "data":[
-                 "0",
-                 "0",
                  "0",
                  "0",
                  "0"
@@ -377,11 +418,9 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "49",
-                 "41",
-                 "36",
-                 "31",
-                 "28"
+                 "21",
+                 "25",
+                 "29"
                ]
              },
              {
@@ -389,11 +428,9 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "7",
-                 "7",
-                 "7",
-                 "6",
-                 "10"
+                 "0",
+                 "0",
+                 "0"
                ]
              }
            ]
@@ -410,9 +447,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sat Jul 14 13:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Conditioning/Sport Psych - SWU Complex</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Monday Jul 16, 2018 -  6:30PM til  7:30PM</H4>
+         Last Run: Sat Jul 14 14:05:03 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Academy - Andrew Sibbald School</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Tuesday Jul 17, 2018 -  7:30PM til  9:00PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -430,40 +467,40 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>06:00 PM</td>
-                        <td>Clear</td>
-                        <td>29</td>
-                        <td>29</td>
-                        <td>0</td>
-                        <td>22</td>
-                        <td>2</td>
-                        <td>11</td>
-                        <td>SE</td>
-                        <td>0</td>
-                     </tr>
-                     <tr>
                         <td>07:00 PM</td>
-                        <td>Clear</td>
+                        <td>Partly Cloudy</td>
                         <td>28</td>
                         <td>28</td>
                         <td>0</td>
-                        <td>25</td>
+                        <td>29</td>
                         <td>1</td>
                         <td>13</td>
-                        <td>SE</td>
-                        <td>0</td>
+                        <td>E</td>
+                        <td>30</td>
                      </tr>
                      <tr>
                         <td>08:00 PM</td>
-                        <td>Clear</td>
+                        <td>Partly Cloudy</td>
                         <td>27</td>
                         <td>27</td>
                         <td>0</td>
-                        <td>30</td>
+                        <td>35</td>
                         <td>0</td>
                         <td>13</td>
-                        <td>ESE</td>
+                        <td>E</td>
+                        <td>33</td>
+                     </tr>
+                     <tr>
+                        <td>09:00 PM</td>
+                        <td>Partly Cloudy</td>
+                        <td>24</td>
+                        <td>24</td>
                         <td>0</td>
+                        <td>43</td>
+                        <td>0</td>
+                        <td>11</td>
+                        <td>E</td>
+                        <td>36</td>
                      </tr>
                   </tbody>
                </table>
@@ -496,9 +533,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
                   var data ={
            "labels":[
-             "06:00 PM",
              "07:00 PM",
-             "08:00 PM"
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
@@ -507,9 +544,9 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "29",
                  "28",
-                 "27"
+                 "27",
+                 "24"
                ]
              },
              {
@@ -518,9 +555,9 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "29",
                  "28",
-                 "27"
+                 "27",
+                 "24"
                ]
              }
            ]
@@ -561,9 +598,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator6").getContext("2d");
                   var data ={
            "labels":[
-             "06:00 PM",
              "07:00 PM",
-             "08:00 PM"
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
@@ -581,9 +618,9 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "22",
-                 "25",
-                 "30"
+                 "29",
+                 "35",
+                 "43"
                ]
              },
              {
@@ -591,9 +628,9 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "0",
-                 "0",
-                 "0"
+                 "30",
+                 "33",
+                 "36"
                ]
              }
            ]
@@ -610,9 +647,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sat Jul 14 13:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Academy - Andrew Sibbald School</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Tuesday Jul 17, 2018 -  7:30PM til  9:00PM</H4>
+         Last Run: Sat Jul 14 14:05:03 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Practice - Douglas Glen Blvd SE</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Thursday Jul 19, 2018 -  6:30PM til  8:00PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -630,40 +667,40 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>07:00 PM</td>
+                        <td>06:00 PM</td>
                         <td>Clear</td>
-                        <td>29</td>
-                        <td>29</td>
-                        <td>0</td>
-                        <td>27</td>
-                        <td>1</td>
-                        <td>11</td>
-                        <td>ENE</td>
-                        <td>24</td>
+                        <td>26</td>
+                        <td>26</td>
+                        <td>4</td>
+                        <td>31</td>
+                        <td>2</td>
+                        <td>13</td>
+                        <td>ESE</td>
+                        <td>23</td>
                      </tr>
                      <tr>
-                        <td>08:00 PM</td>
+                        <td>07:00 PM</td>
                         <td>Clear</td>
-                        <td>27</td>
-                        <td>27</td>
-                        <td>0</td>
-                        <td>34</td>
-                        <td>0</td>
-                        <td>13</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>5</td>
+                        <td>35</td>
+                        <td>1</td>
+                        <td>14</td>
                         <td>ENE</td>
                         <td>21</td>
                      </tr>
                      <tr>
-                        <td>09:00 PM</td>
+                        <td>08:00 PM</td>
                         <td>Clear</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>0</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>5</td>
                         <td>42</td>
                         <td>0</td>
-                        <td>13</td>
-                        <td>ENE</td>
-                        <td>19</td>
+                        <td>14</td>
+                        <td>NNE</td>
+                        <td>18</td>
                      </tr>
                   </tbody>
                </table>
@@ -696,9 +733,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator7").getContext("2d");
                   var data ={
            "labels":[
+             "06:00 PM",
              "07:00 PM",
-             "08:00 PM",
-             "09:00 PM"
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -707,9 +744,9 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "29",
-                 "27",
-                 "24"
+                 "26",
+                 "25",
+                 "23"
                ]
              },
              {
@@ -718,9 +755,9 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "29",
-                 "27",
-                 "24"
+                 "26",
+                 "25",
+                 "23"
                ]
              }
            ]
@@ -761,9 +798,9 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator8").getContext("2d");
                   var data ={
            "labels":[
+             "06:00 PM",
              "07:00 PM",
-             "08:00 PM",
-             "09:00 PM"
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -771,9 +808,9 @@
                "strokeColor":"rgba(0,0,255,1)",
                "fillColor":"rgba(0,0,255,0.5)",
                "data":[
-                 "0",
-                 "0",
-                 "0"
+                 "4",
+                 "5",
+                 "5"
                ]
              },
              {
@@ -781,8 +818,8 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "27",
-                 "34",
+                 "31",
+                 "35",
                  "42"
                ]
              },
@@ -791,9 +828,9 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "24",
+                 "23",
                  "21",
-                 "19"
+                 "18"
                ]
              }
            ]
@@ -804,206 +841,6 @@
                                    };
                   var MyNewChart = new Chart(ctx).BarAlt(data,options);
                   document.getElementById("legend_chartHTMLReportGenerator8").innerHTML=MyNewChart.generateLegend();
-               </script>
-         <hr style="border-width:5px ">
-      </div>
-      <div style="padding:10px;border: 1px none black">
-         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
-         <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sat Jul 14 13:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Practice - Douglas Glen Blvd SE</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Thursday Jul 19, 2018 -  6:30PM til  8:00PM</H4>
-               <table class="table table-striped">
-                  <thead>
-                     <tr>
-                        <th>Forecast Time</th>
-                        <th>Summary</th>
-                        <th>Temperture (°C)</th>
-                        <th>Feels Like (°C)</th>
-                        <th>POP (%)</th>
-                        <th>Humidity (%)</th>
-                        <th>UV</th>
-                        <th>Wind (km/hr)</th>
-                        <th>Wind Dir.</th>
-                        <th>Cloud Cover (%)</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>06:00 PM</td>
-                        <td>Clear</td>
-                        <td>25</td>
-                        <td>25</td>
-                        <td>10</td>
-                        <td>34</td>
-                        <td>2</td>
-                        <td>14</td>
-                        <td>E</td>
-                        <td>6</td>
-                     </tr>
-                     <tr>
-                        <td>07:00 PM</td>
-                        <td>Clear</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>12</td>
-                        <td>38</td>
-                        <td>1</td>
-                        <td>14</td>
-                        <td>NE</td>
-                        <td>6</td>
-                     </tr>
-                     <tr>
-                        <td>08:00 PM</td>
-                        <td>Clear</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>14</td>
-                        <td>44</td>
-                        <td>0</td>
-                        <td>16</td>
-                        <td>NE</td>
-                        <td>7</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator9"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator9" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator9").getContext("2d");
-                  var data ={
-           "labels":[
-             "06:00 PM",
-             "07:00 PM",
-             "08:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
-               "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
-               "data":[
-                 "25",
-                 "24",
-                 "22"
-               ]
-             },
-             {
-               "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
-               "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
-               "data":[
-                 "25",
-                 "24",
-                 "22"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator9").innerHTML=MyNewChart.generateLegend();
-               </script>
-               </style>
-               <div class="container-fluid">
-               	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator10"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator10" style="padding-left:75px;padding-top:25px"></div>
-               	</div>
-               </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-               <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator10").getContext("2d");
-                  var data ={
-           "labels":[
-             "06:00 PM",
-             "07:00 PM",
-             "08:00 PM"
-           ],
-           "datasets":[
-             {
-               "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
-               "data":[
-                 "10",
-                 "12",
-                 "14"
-               ]
-             },
-             {
-               "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
-               "data":[
-                 "34",
-                 "38",
-                 "44"
-               ]
-             },
-             {
-               "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
-               "data":[
-                 "6",
-                 "6",
-                 "7"
-               ]
-             }
-           ]
-         };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator10").innerHTML=MyNewChart.generateLegend();
                </script>
          <hr style="border-width:5px ">
       </div>
