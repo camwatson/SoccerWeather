@@ -9,9 +9,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Wed Oct 24 21:05:04 2018</p>
-               <H1 style="color:rgb(0,0,0)" class="text-center">Practice - SWU Complex</H1>
-               <H4 style="color:rgb(140,140,140)" class="text-center">Wednesday Oct 24, 2018 -  8:00PM til  9:30PM</H4>
+         Last Run: Thu Oct 25 15:05:04 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Team Dinner - Watson's</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Saturday Oct 27, 2018 -  4:00PM til  8:00PM</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -29,16 +29,64 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>10:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>7</td>
+                        <td>04:00 PM</td>
+                        <td>Clear</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>28</td>
+                        <td>1</td>
+                        <td>21</td>
+                        <td>WNW</td>
+                        <td>6</td>
+                     </tr>
+                     <tr>
+                        <td>05:00 PM</td>
+                        <td>Clear</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td>18</td>
+                        <td>WNW</td>
                         <td>5</td>
+                     </tr>
+                     <tr>
+                        <td>06:00 PM</td>
+                        <td>Clear</td>
+                        <td>8</td>
+                        <td>6</td>
                         <td>0</td>
-                        <td>69</td>
+                        <td>34</td>
                         <td>0</td>
-                        <td>10</td>
+                        <td>13</td>
                         <td>W</td>
-                        <td>40</td>
+                        <td>4</td>
+                     </tr>
+                     <tr>
+                        <td>07:00 PM</td>
+                        <td>Clear</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>39</td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td>W</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <td>08:00 PM</td>
+                        <td>Clear</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>43</td>
+                        <td>0</td>
+                        <td>11</td>
+                        <td>W</td>
+                        <td>3</td>
                      </tr>
                   </tbody>
                </table>
@@ -71,7 +119,11 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
-             "10:00 PM"
+             "04:00 PM",
+             "05:00 PM",
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -80,7 +132,11 @@
                "pointColor":"rgba(92,0,141,1)",
                "fillColor":"rgba(92,0,141,0)",
                "data":[
-                 "5"
+                 "9",
+                 "9",
+                 "6",
+                 "3",
+                 "1"
                ]
              },
              {
@@ -89,7 +145,11 @@
                "pointColor":"rgba(252,49,18,1)",
                "fillColor":"rgba(252,49,18,0)",
                "data":[
-                 "7"
+                 "9",
+                 "9",
+                 "8",
+                 "6",
+                 "4"
                ]
              }
            ]
@@ -130,7 +190,11 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
-             "10:00 PM"
+             "04:00 PM",
+             "05:00 PM",
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM"
            ],
            "datasets":[
              {
@@ -138,6 +202,10 @@
                "strokeColor":"rgba(0,0,255,1)",
                "fillColor":"rgba(0,0,255,0.5)",
                "data":[
+                 "0",
+                 "0",
+                 "0",
+                 "0",
                  "0"
                ]
              },
@@ -146,7 +214,11 @@
                "strokeColor":"rgba(40,177,255,1)",
                "fillColor":"rgba(40,177,255,0.5)",
                "data":[
-                 "69"
+                 "28",
+                 "30",
+                 "34",
+                 "39",
+                 "43"
                ]
              },
              {
@@ -154,7 +226,11 @@
                "strokeColor":"rgba(233,37,255,1)",
                "fillColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "40"
+                 "6",
+                 "5",
+                 "4",
+                 "1",
+                 "3"
                ]
              }
            ]
@@ -166,7 +242,6 @@
                   var MyNewChart = new Chart(ctx).BarAlt(data,options);
                   document.getElementById("legend_chartHTMLReportGenerator2").innerHTML=MyNewChart.generateLegend();
                </script>
-         <img src="http://www.wmiradar.com/alberta/latest_loop.gif">
          <hr style="border-width:5px ">
       </div>
    </body>
