@@ -9,7 +9,7 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sun Oct 28 22:05:09 2018</p>
+         Last Run: Sun Oct 28 22:48:03 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Academy - SWU Complex</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Tuesday Oct 30, 2018 -  8:15PM til  9:45PM</H4>
                <table class="table table-striped">
@@ -69,29 +69,11 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator1" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
@@ -102,9 +84,10 @@
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
                  "0",
                  "-1",
@@ -113,9 +96,10 @@
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
                  "3",
                  "2",
@@ -124,39 +108,44 @@
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator1").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator2" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
@@ -167,8 +156,9 @@
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
                  "1",
                  "1",
@@ -177,8 +167,9 @@
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
                  "53",
                  "56",
@@ -187,8 +178,9 @@
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
                  "49",
                  "38",
@@ -197,19 +189,42 @@
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator2").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
          <hr style="border-width:5px ">
       </div>
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sun Oct 28 22:05:09 2018</p>
+         Last Run: Sun Oct 28 22:48:03 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Game vs. Blizzard SC 03 - Foothills Telus Field</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Saturday Nov 03, 2018 - 10:40AM til 11:40AM</H4>
                <table class="table table-striped">
@@ -269,29 +284,11 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator3"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator3" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator3"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator3").getContext("2d");
                   var data ={
            "labels":[
@@ -302,9 +299,10 @@
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
                  "-4",
                  "-4",
@@ -313,9 +311,10 @@
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
                  "-1",
                  "0",
@@ -324,39 +323,44 @@
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator3").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator4" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
                   var data ={
            "labels":[
@@ -367,8 +371,9 @@
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
                  "22",
                  "21",
@@ -377,8 +382,9 @@
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
                  "92",
                  "81",
@@ -387,8 +393,9 @@
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
                  "74",
                  "76",
@@ -397,19 +404,42 @@
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator4").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
          <hr style="border-width:5px ">
       </div>
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Sun Oct 28 22:05:09 2018</p>
+         Last Run: Sun Oct 28 22:48:03 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Academy - SWU Complex</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Sunday Nov 04, 2018 - 12:30PM til  2:00PM</H4>
                <table class="table table-striped">
@@ -433,12 +463,12 @@
                         <td>Mostly Cloudy</td>
                         <td>3</td>
                         <td>0</td>
-                        <td>10</td>
+                        <td>9</td>
                         <td>59</td>
                         <td>1</td>
                         <td>11</td>
                         <td>SSW</td>
-                        <td>65</td>
+                        <td>64</td>
                      </tr>
                      <tr>
                         <td>01:00 PM</td>
@@ -469,29 +499,11 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator5" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
                   var data ={
            "labels":[
@@ -502,9 +514,10 @@
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
                  "0",
                  "2",
@@ -513,9 +526,10 @@
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
                  "3",
                  "5",
@@ -524,39 +538,44 @@
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator5").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator6"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator6" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator6"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator6").getContext("2d");
                   var data ={
            "labels":[
@@ -567,18 +586,20 @@
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 "10",
+                 "9",
                  "10",
                  "16"
                ]
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
                  "59",
                  "56",
@@ -587,22 +608,46 @@
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "65",
+                 "64",
                  "65",
                  "65"
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator6").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
          <hr style="border-width:5px ">
       </div>
