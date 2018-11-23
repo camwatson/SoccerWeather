@@ -9,7 +9,241 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Fri Nov 23 15:05:02 2018</p>
+         Last Run: Fri Nov 23 16:05:02 2018</p>
+               <H1 style="color:rgb(0,0,0)" class="text-center">Game vs. Blizzard SC02 - Foothills Boardwalk Field</H1>
+               <H4 style="color:rgb(140,140,140)" class="text-center">Saturday Nov 24, 2018 -  1:00PM til  2:30PM</H4>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Forecast Time</th>
+                        <th>Summary</th>
+                        <th>Temperture (°C)</th>
+                        <th>Feels Like (°C)</th>
+                        <th>POP (%)</th>
+                        <th>Humidity (%)</th>
+                        <th>UV</th>
+                        <th>Wind (km/hr)</th>
+                        <th>Wind Dir.</th>
+                        <th>Cloud Cover (%)</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>12:00 PM</td>
+                        <td>Mostly Cloudy</td>
+                        <td>-2</td>
+                        <td>-4</td>
+                        <td>7</td>
+                        <td>80</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>S</td>
+                        <td>69</td>
+                     </tr>
+                     <tr>
+                        <td>01:00 PM</td>
+                        <td>Partly Cloudy</td>
+                        <td>-1</td>
+                        <td>-4</td>
+                        <td>6</td>
+                        <td>74</td>
+                        <td>1</td>
+                        <td>8</td>
+                        <td>S</td>
+                        <td>45</td>
+                     </tr>
+                     <tr>
+                        <td>02:00 PM</td>
+                        <td>Clear</td>
+                        <td>-1</td>
+                        <td>-4</td>
+                        <td>6</td>
+                        <td>70</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>S</td>
+                        <td>27</td>
+                     </tr>
+                     <tr>
+                        <td>03:00 PM</td>
+                        <td>Clear</td>
+                        <td>-1</td>
+                        <td>-4</td>
+                        <td>6</td>
+                        <td>71</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>SSE</td>
+                        <td>21</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
+                  var data ={
+           "labels":[
+             "12:00 PM",
+             "01:00 PM",
+             "02:00 PM",
+             "03:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"apparentTemperature",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(92,0,141,1)",
+               "backgroundColor":"rgba(92,0,141,0)",
+               "data":[
+                 "-4",
+                 "-4",
+                 "-4",
+                 "-4"
+               ]
+             },
+             {
+               "label":"temperature",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(252,49,18,1)",
+               "backgroundColor":"rgba(252,49,18,0)",
+               "data":[
+                 "-2",
+                 "-1",
+                 "-1",
+                 "-1"
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
+               </script>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
+                  var data ={
+           "labels":[
+             "12:00 PM",
+             "01:00 PM",
+             "02:00 PM",
+             "03:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"precipProbability",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
+               "data":[
+                 "7",
+                 "6",
+                 "6",
+                 "6"
+               ]
+             },
+             {
+               "label":"humidity",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
+               "data":[
+                 "80",
+                 "74",
+                 "70",
+                 "71"
+               ]
+             },
+             {
+               "label":"cloudCover",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
+               "data":[
+                 "69",
+                 "45",
+                 "27",
+                 "21"
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
+               </script>
+         <hr style="border-width:5px ">
+      </div>
+      <div style="padding:10px;border: 1px none black">
+         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
+         <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
+         Last Run: Fri Nov 23 16:05:02 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Academy - SWU Complex</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Sunday Nov 25, 2018 - 12:30PM til  2:00PM</H4>
                <table class="table table-striped">
@@ -32,11 +266,11 @@
                         <td>12:00 PM</td>
                         <td>Partly Cloudy</td>
                         <td>0</td>
-                        <td>-2</td>
-                        <td>3</td>
+                        <td>-3</td>
+                        <td>2</td>
                         <td>61</td>
                         <td>1</td>
-                        <td>6</td>
+                        <td>8</td>
                         <td>WSW</td>
                         <td>42</td>
                      </tr>
@@ -69,12 +303,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator3"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator3").getContext("2d");
                   var data ={
            "labels":[
              "12:00 PM",
@@ -89,7 +323,7 @@
                "pointColor":"rgba(92,0,141,1)",
                "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "-2",
+                 "-3",
                  "-1",
                  "0"
                ]
@@ -141,12 +375,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
                   var data ={
            "labels":[
              "12:00 PM",
@@ -160,7 +394,7 @@
                "borderWidth":2,
                "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 "3",
+                 "2",
                  "2",
                  "2"
                ]
@@ -224,7 +458,7 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Fri Nov 23 15:05:02 2018</p>
+         Last Run: Fri Nov 23 16:05:02 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Academy - SWU Complex</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Monday Nov 26, 2018 -  9:15PM til 10:45PM</H4>
                <table class="table table-striped">
@@ -247,24 +481,24 @@
                         <td>09:00 PM</td>
                         <td>Mostly Cloudy</td>
                         <td>-2</td>
-                        <td>-4</td>
+                        <td>-5</td>
                         <td>6</td>
                         <td>84</td>
                         <td>0</td>
-                        <td>6</td>
-                        <td>SSW</td>
-                        <td>72</td>
+                        <td>8</td>
+                        <td>S</td>
+                        <td>74</td>
                      </tr>
                      <tr>
                         <td>10:00 PM</td>
                         <td>Mostly Cloudy</td>
-                        <td>-2</td>
-                        <td>-5</td>
+                        <td>-3</td>
+                        <td>-6</td>
                         <td>6</td>
-                        <td>83</td>
+                        <td>84</td>
                         <td>0</td>
                         <td>8</td>
-                        <td>SSW</td>
+                        <td>S</td>
                         <td>70</td>
                      </tr>
                      <tr>
@@ -273,9 +507,9 @@
                         <td>-3</td>
                         <td>-6</td>
                         <td>6</td>
-                        <td>86</td>
+                        <td>87</td>
                         <td>0</td>
-                        <td>8</td>
+                        <td>6</td>
                         <td>SSW</td>
                         <td>68</td>
                      </tr>
@@ -284,12 +518,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator3"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator3").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
                   var data ={
            "labels":[
              "09:00 PM",
@@ -304,8 +538,8 @@
                "pointColor":"rgba(92,0,141,1)",
                "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "-4",
                  "-5",
+                 "-6",
                  "-6"
                ]
              },
@@ -317,7 +551,7 @@
                "backgroundColor":"rgba(252,49,18,0)",
                "data":[
                  "-2",
-                 "-2",
+                 "-3",
                  "-3"
                ]
              }
@@ -356,12 +590,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator6"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator6").getContext("2d");
                   var data ={
            "labels":[
              "09:00 PM",
@@ -387,8 +621,8 @@
                "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
                  "84",
-                 "83",
-                 "86"
+                 "84",
+                 "87"
                ]
              },
              {
@@ -397,7 +631,7 @@
                "borderWidth":2,
                "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "72",
+                 "74",
                  "70",
                  "68"
                ]
@@ -439,7 +673,7 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://www.wunderground.com/?apiref=b04849edbe8b2369">
          <img class="img-responsive center-block" src="https://icons.wxug.com/logos/JPG/wundergroundLogo_4c_horz.jpg" alt="" width="180"></a>
-         Last Run: Fri Nov 23 15:05:02 2018</p>
+         Last Run: Fri Nov 23 16:05:02 2018</p>
                <H1 style="color:rgb(0,0,0)" class="text-center">Practice - SWU Complex</H1>
                <H4 style="color:rgb(140,140,140)" class="text-center">Wednesday Nov 28, 2018 -  9:15PM til 10:45PM</H4>
                <table class="table table-striped">
@@ -460,15 +694,15 @@
                   <tbody>
                      <tr>
                         <td>09:00 PM</td>
-                        <td>Clear</td>
+                        <td>Partly Cloudy</td>
                         <td>-3</td>
                         <td>-6</td>
                         <td>6</td>
                         <td>81</td>
                         <td>0</td>
                         <td>6</td>
-                        <td>WSW</td>
-                        <td>28</td>
+                        <td>W</td>
+                        <td>30</td>
                      </tr>
                      <tr>
                         <td>10:00 PM</td>
@@ -478,7 +712,7 @@
                         <td>6</td>
                         <td>83</td>
                         <td>0</td>
-                        <td>6</td>
+                        <td>8</td>
                         <td>W</td>
                         <td>31</td>
                      </tr>
@@ -499,12 +733,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator7"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator7").getContext("2d");
                   var data ={
            "labels":[
              "09:00 PM",
@@ -571,12 +805,12 @@
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator6"></canvas></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator8"></canvas></div>
                	</div>
                </div>
                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-                  var ctx = document.getElementById("chartHTMLReportGenerator6").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator8").getContext("2d");
                   var data ={
            "labels":[
              "09:00 PM",
@@ -612,7 +846,7 @@
                "borderWidth":2,
                "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 "28",
+                 "30",
                  "31",
                  "33"
                ]
