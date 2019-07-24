@@ -9,9 +9,9 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
          <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
-         Last Run: May 24, 2019 at 14:05</p>
-         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/202922425">Game vs. Frasier Valley Premier - Kamloops</a></H1>
-               <H4 style="color:rgb(0,0,0)" class="text-center">2019-05-24T22:00:00Z til 2019-05-24T23:30:00Z</H4>
+         Last Run: July 24, 2019 at 22:59</p>
+         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/206092407">Practice - Diamond Cove</a></H1>
+               <H4 style="color:rgb(0,0,0)" class="text-center">2019-07-26T01:30:00Z til 2019-07-26T03:00:00Z</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -29,189 +29,205 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>03:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>26</td>
-                        <td>26</td>
-                        <td>8.0</td>
-                        <td>24.0</td>
-                        <td>4</td>
+                        <td>07:00 PM</td>
+                        <td>Clear</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>1.0</td>
+                        <td>38.0</td>
+                        <td>1</td>
+                        <td>19</td>
+                        <td>None</td>
+                        <td>4.0</td>
+                     </tr>
+                     <tr>
+                        <td>08:00 PM</td>
+                        <td>Clear</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>0</td>
+                        <td>43.0</td>
+                        <td>0</td>
+                        <td>15</td>
+                        <td>None</td>
+                        <td>6.0</td>
+                     </tr>
+                     <tr>
+                        <td>09:00 PM</td>
+                        <td>Clear</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>48.0</td>
+                        <td>0</td>
                         <td>11</td>
                         <td>None</td>
-                        <td>42.0</td>
-                     </tr>
-                     <tr>
-                        <td>04:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>26</td>
-                        <td>26</td>
-                        <td>8.0</td>
-                        <td>25.0</td>
-                        <td>3</td>
-                        <td>12</td>
-                        <td>None</td>
-                        <td>43.0</td>
-                     </tr>
-                     <tr>
-                        <td>05:00 PM</td>
-                        <td>Partly Cloudy</td>
-                        <td>25</td>
-                        <td>25</td>
-                        <td>9.0</td>
-                        <td>27.0</td>
-                        <td>2</td>
-                        <td>13</td>
-                        <td>None</td>
-                        <td>45.0</td>
+                        <td>6.0</td>
                      </tr>
                   </tbody>
                </table>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator1" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator1"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
-             "03:00 PM",
-             "04:00 PM",
-             "05:00 PM"
+             "07:00 PM",
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "26",
-                 "26",
-                 "25"
+                 "23",
+                 "22",
+                 "20"
                ]
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
-                 "26",
-                 "26",
-                 "25"
+                 "23",
+                 "22",
+                 "20"
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator1").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator2" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator2"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
-             "03:00 PM",
-             "04:00 PM",
-             "05:00 PM"
+             "07:00 PM",
+             "08:00 PM",
+             "09:00 PM"
            ],
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 8.0,
-                 8.0,
-                 9.0
+                 1.0,
+                 0,
+                 0
                ]
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
-                 24.0,
-                 25.0,
-                 27.0
+                 38.0,
+                 43.0,
+                 48.0
                ]
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 42.0,
-                 43.0,
-                 45.0
+                 4.0,
+                 6.0,
+                 6.0
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator2").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
                <div id="mapHTMLReportGenerator3" style="width:100%;height:500px;"></div>
-               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
-                        <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+                        <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
                <script>
-                  var map = L.map('mapHTMLReportGenerator3').setView([49, -123], 13);
+                  var map = L.map('mapHTMLReportGenerator3').setView([0, 0], 3);
                               L.esri.basemapLayer("Topographic").addTo(map);
-                  var layer=L.geoJson([
+                  var layer = L.geoJson(
+                     [
            {
              "type":"Feature",
              "properties":{
@@ -221,8 +237,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.0198392,
+                 50.9444033
                ]
              }
            },
@@ -235,8 +251,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.0198392,
+                 50.9444033
                ]
              }
            },
@@ -249,22 +265,28 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.0198392,
+                 50.9444033
                ]
              }
            }
-         ],{onEachFeature: function (feature, layer) {layer.bindPopup(feature.properties.name);}, style:{"color": "rgb(255,0,0)"}}).addTo(map);
-                  map.fitBounds(layer, {maxZoom: 12});
+         ],
+                     {
+                         onEachFeature: function (feature, layer) {
+                             layer.bindPopup(feature.properties.popupContent);
+                         },
+                         style:{"color": "rgb(255,0,0)"}
+                     }).addTo(map);
+                  map.fitBounds(layer.getBounds());
                </script>
          <hr style="border-width:5px ">
       </div>
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
          <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
-         Last Run: May 24, 2019 at 14:05</p>
-         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/202922462">Game vs. Mountain United FC - Kamloops</a></H1>
-               <H4 style="color:rgb(0,0,0)" class="text-center">2019-05-25T23:45:00Z til 2019-05-26T01:15:00Z</H4>
+         Last Run: July 24, 2019 at 22:59</p>
+         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/207246473">Psych Session - SWU Complex</a></H1>
+               <H4 style="color:rgb(0,0,0)" class="text-center">2019-07-27T00:00:00Z til 2019-07-27T01:30:00Z</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -283,80 +305,62 @@
                   <tbody>
                      <tr>
                         <td>04:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>22.0</td>
-                        <td>34.0</td>
-                        <td>3</td>
-                        <td>7</td>
+                        <td>Clear</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>0</td>
+                        <td>35.0</td>
+                        <td>4</td>
+                        <td>11</td>
                         <td>None</td>
-                        <td>77.0</td>
+                        <td>0</td>
                      </tr>
                      <tr>
                         <td>05:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>25</td>
-                        <td>25</td>
-                        <td>22.0</td>
-                        <td>33.0</td>
-                        <td>2</td>
-                        <td>8</td>
+                        <td>Clear</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>0</td>
+                        <td>35.0</td>
+                        <td>3</td>
+                        <td>11</td>
                         <td>None</td>
-                        <td>79.0</td>
+                        <td>0</td>
                      </tr>
                      <tr>
                         <td>06:00 PM</td>
-                        <td>Possible Light Rain</td>
-                        <td>24</td>
-                        <td>24</td>
-                        <td>27.0</td>
-                        <td>35.0</td>
+                        <td>Clear</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>0</td>
+                        <td>38.0</td>
                         <td>1</td>
-                        <td>7</td>
+                        <td>10</td>
                         <td>None</td>
-                        <td>82.0</td>
+                        <td>1.0</td>
                      </tr>
                      <tr>
                         <td>07:00 PM</td>
-                        <td>Mostly Cloudy</td>
-                        <td>23</td>
-                        <td>23</td>
-                        <td>19.0</td>
-                        <td>37.0</td>
+                        <td>Clear</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>1.0</td>
+                        <td>44.0</td>
                         <td>0</td>
-                        <td>7</td>
+                        <td>8</td>
                         <td>None</td>
-                        <td>84.0</td>
+                        <td>2.0</td>
                      </tr>
                   </tbody>
                </table>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator4" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator4"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator4").getContext("2d");
                   var data ={
            "labels":[
@@ -368,63 +372,70 @@
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "24",
-                 "25",
-                 "24",
-                 "23"
+                 "27",
+                 "27",
+                 "27",
+                 "25"
                ]
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
-                 "24",
-                 "25",
-                 "24",
-                 "23"
+                 "27",
+                 "27",
+                 "27",
+                 "25"
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator4").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator5" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator5"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator5").getContext("2d");
                   var data ={
            "labels":[
@@ -436,54 +447,81 @@
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 22.0,
-                 22.0,
-                 27.0,
-                 19.0
+                 0,
+                 0,
+                 0,
+                 1.0
                ]
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
-                 34.0,
-                 33.0,
                  35.0,
-                 37.0
+                 35.0,
+                 38.0,
+                 44.0
                ]
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 77.0,
-                 79.0,
-                 82.0,
-                 84.0
+                 0,
+                 0,
+                 1.0,
+                 2.0
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator5").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
                <div id="mapHTMLReportGenerator6" style="width:100%;height:500px;"></div>
-               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
-                        <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+                        <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
                <script>
-                  var map = L.map('mapHTMLReportGenerator6').setView([49, -123], 13);
+                  var map = L.map('mapHTMLReportGenerator6').setView([0, 0], 3);
                               L.esri.basemapLayer("Topographic").addTo(map);
-                  var layer=L.geoJson([
+                  var layer = L.geoJson(
+                     [
            {
              "type":"Feature",
              "properties":{
@@ -493,8 +531,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -113.9442,
+                 50.9705
                ]
              }
            },
@@ -507,8 +545,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -113.9442,
+                 50.9705
                ]
              }
            },
@@ -521,8 +559,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -113.9442,
+                 50.9705
                ]
              }
            },
@@ -535,22 +573,28 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -113.9442,
+                 50.9705
                ]
              }
            }
-         ],{onEachFeature: function (feature, layer) {layer.bindPopup(feature.properties.name);}, style:{"color": "rgb(255,0,0)"}}).addTo(map);
-                  map.fitBounds(layer, {maxZoom: 12});
+         ],
+                     {
+                         onEachFeature: function (feature, layer) {
+                             layer.bindPopup(feature.properties.popupContent);
+                         },
+                         style:{"color": "rgb(255,0,0)"}
+                     }).addTo(map);
+                  map.fitBounds(layer.getBounds());
                </script>
          <hr style="border-width:5px ">
       </div>
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
          <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
-         Last Run: May 24, 2019 at 14:05</p>
-         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/202922521">Game vs. Vancouver Island Wave - Kamloops</a></H1>
-               <H4 style="color:rgb(0,0,0)" class="text-center">2019-05-26T14:45:00Z til 2019-05-26T16:15:00Z</H4>
+         Last Run: July 24, 2019 at 22:59</p>
+         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/205760592">Game vs. Blizzard Alliance - Edge School</a></H1>
+               <H4 style="color:rgb(0,0,0)" class="text-center">2019-07-27T21:30:00Z til 2019-07-27T23:30:00Z</H4>
                <table class="table table-striped">
                   <thead>
                      <tr>
@@ -568,208 +612,565 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>07:00 AM</td>
+                        <td>02:00 PM</td>
                         <td>Clear</td>
-                        <td>15</td>
-                        <td>15</td>
-                        <td>1.0</td>
-                        <td>44.0</td>
-                        <td>0</td>
-                        <td>6</td>
-                        <td>None</td>
-                        <td>7.000000000000001</td>
-                     </tr>
-                     <tr>
-                        <td>08:00 AM</td>
-                        <td>Clear</td>
-                        <td>17</td>
-                        <td>17</td>
-                        <td>1.0</td>
-                        <td>41.0</td>
-                        <td>1</td>
-                        <td>7</td>
-                        <td>None</td>
-                        <td>8.0</td>
-                     </tr>
-                     <tr>
-                        <td>09:00 AM</td>
-                        <td>Clear</td>
-                        <td>19</td>
-                        <td>19</td>
-                        <td>1.0</td>
-                        <td>36.0</td>
-                        <td>2</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>3.0</td>
+                        <td>37.0</td>
                         <td>8</td>
+                        <td>20</td>
+                        <td>None</td>
+                        <td>5.0</td>
+                     </tr>
+                     <tr>
+                        <td>03:00 PM</td>
+                        <td>Clear</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>3.0</td>
+                        <td>36.0</td>
+                        <td>7</td>
+                        <td>20</td>
+                        <td>None</td>
+                        <td>5.0</td>
+                     </tr>
+                     <tr>
+                        <td>04:00 PM</td>
+                        <td>Clear</td>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>5.0</td>
+                        <td>37.0</td>
+                        <td>5</td>
+                        <td>20</td>
                         <td>None</td>
                         <td>8.0</td>
                      </tr>
                      <tr>
-                        <td>10:00 AM</td>
+                        <td>05:00 PM</td>
                         <td>Clear</td>
                         <td>21</td>
                         <td>21</td>
-                        <td>1.0</td>
-                        <td>31.0</td>
+                        <td>6.0</td>
+                        <td>37.0</td>
                         <td>4</td>
-                        <td>9</td>
+                        <td>21</td>
                         <td>None</td>
                         <td>12.0</td>
+                     </tr>
+                     <tr>
+                        <td>06:00 PM</td>
+                        <td>Partly Cloudy</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>5.0</td>
+                        <td>39.0</td>
+                        <td>2</td>
+                        <td>20</td>
+                        <td>None</td>
+                        <td>15.0</td>
                      </tr>
                   </tbody>
                </table>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator7"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator7" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator7"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Line.extend({
-         name: "LineAlt",
-         draw: function () {
-         Chart.types.Line.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Temp (C)", 0, 0);
-         ctx.restore();
-         }});
                   var ctx = document.getElementById("chartHTMLReportGenerator7").getContext("2d");
                   var data ={
            "labels":[
-             "07:00 AM",
-             "08:00 AM",
-             "09:00 AM",
-             "10:00 AM"
+             "02:00 PM",
+             "03:00 PM",
+             "04:00 PM",
+             "05:00 PM",
+             "06:00 PM"
            ],
            "datasets":[
              {
                "label":"apparentTemperature",
-               "strokeColor":"rgba(92,0,141,1)",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
                "pointColor":"rgba(92,0,141,1)",
-               "fillColor":"rgba(92,0,141,0)",
+               "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "15",
-                 "17",
+                 "22",
+                 "22",
+                 "21",
+                 "21",
+                 "20"
+               ]
+             },
+             {
+               "label":"temperature",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(252,49,18,1)",
+               "backgroundColor":"rgba(252,49,18,0)",
+               "data":[
+                 "22",
+                 "22",
+                 "21",
+                 "21",
+                 "20"
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
+               </script>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator8"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator8").getContext("2d");
+                  var data ={
+           "labels":[
+             "02:00 PM",
+             "03:00 PM",
+             "04:00 PM",
+             "05:00 PM",
+             "06:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"precipProbability",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
+               "data":[
+                 3.0,
+                 3.0,
+                 5.0,
+                 6.0,
+                 5.0
+               ]
+             },
+             {
+               "label":"humidity",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
+               "data":[
+                 37.0,
+                 36.0,
+                 37.0,
+                 37.0,
+                 39.0
+               ]
+             },
+             {
+               "label":"cloudCover",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
+               "data":[
+                 5.0,
+                 5.0,
+                 8.0,
+                 12.0,
+                 15.0
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
+               </script>
+               <div id="mapHTMLReportGenerator9" style="width:100%;height:500px;"></div>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+                        <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
+               <script>
+                  var map = L.map('mapHTMLReportGenerator9').setView([0, 0], 3);
+                              L.esri.basemapLayer("Topographic").addTo(map);
+                  var layer = L.geoJson(
+                     [
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.355092,
+                 51.094822
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.355092,
+                 51.094822
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.355092,
+                 51.094822
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.355092,
+                 51.094822
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.355092,
+                 51.094822
+               ]
+             }
+           }
+         ],
+                     {
+                         onEachFeature: function (feature, layer) {
+                             layer.bindPopup(feature.properties.popupContent);
+                         },
+                         style:{"color": "rgb(255,0,0)"}
+                     }).addTo(map);
+                  map.fitBounds(layer.getBounds());
+               </script>
+         <hr style="border-width:5px ">
+      </div>
+      <div style="padding:10px;border: 1px none black">
+         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
+         <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
+         Last Run: July 24, 2019 at 22:59</p>
+         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/205759762">Academy - Andrew Sibbald School</a></H1>
+               <H4 style="color:rgb(0,0,0)" class="text-center">2019-07-28T18:00:00Z til 2019-07-28T19:30:00Z</H4>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Forecast Time</th>
+                        <th>Summary</th>
+                        <th>Temperture (°C)</th>
+                        <th>Feels Like (°C)</th>
+                        <th>POP (%)</th>
+                        <th>Humidity (%)</th>
+                        <th>UV</th>
+                        <th>Wind (km/hr)</th>
+                        <th>Wind Dir.</th>
+                        <th>Cloud Cover (%)</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>10:00 AM</td>
+                        <td>Clear</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>0</td>
+                        <td>44.0</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>None</td>
+                        <td>6.0</td>
+                     </tr>
+                     <tr>
+                        <td>11:00 AM</td>
+                        <td>Clear</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>1.0</td>
+                        <td>41.0</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>None</td>
+                        <td>8.0</td>
+                     </tr>
+                     <tr>
+                        <td>12:00 PM</td>
+                        <td>Clear</td>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>40.0</td>
+                        <td>7</td>
+                        <td>9</td>
+                        <td>None</td>
+                        <td>7.000000000000001</td>
+                     </tr>
+                     <tr>
+                        <td>01:00 PM</td>
+                        <td>Clear</td>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>40.0</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>None</td>
+                        <td>6.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator10"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator10").getContext("2d");
+                  var data ={
+           "labels":[
+             "10:00 AM",
+             "11:00 AM",
+             "12:00 PM",
+             "01:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"apparentTemperature",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(92,0,141,1)",
+               "backgroundColor":"rgba(92,0,141,0)",
+               "data":[
                  "19",
+                 "20",
+                 "21",
                  "21"
                ]
              },
              {
                "label":"temperature",
-               "strokeColor":"rgba(252,49,18,1)",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
                "pointColor":"rgba(252,49,18,1)",
-               "fillColor":"rgba(252,49,18,0)",
+               "backgroundColor":"rgba(252,49,18,0)",
                "data":[
-                 "15",
-                 "17",
                  "19",
+                 "20",
+                 "21",
                  "21"
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).LineAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator7").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
                </script>
                </style>
                <div class="container-fluid">
                	<div class="row">
-               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator8"></canvas><p><small>Date/Time</small></p></div>
-               		<div class="col-xs-4" id="legend_chartHTMLReportGenerator8" style="padding-left:75px;padding-top:25px"></div>
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator11"></canvas></div>
                	</div>
                </div>
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
                <script>
-               Chart.types.Bar.extend({
-         name: "BarAlt",
-         draw: function () {
-         Chart.types.Bar.prototype.draw.apply(this, arguments);
-         var ctx = this.chart.ctx;
-         ctx.save();
-         ctx.textAlign = "center";
-         ctx.textBaseline = "bottom";
-         ctx.fillStyle = this.options.scaleFontColor;
-         this.scale.xScalePaddingLeft=100;
-         var x = this.scale.xScalePaddingLeft * 0.4;
-         var y = this.chart.height / 2;
-         ctx.translate(x, y);
-         ctx.rotate(-90 * Math.PI / 180);
-         ctx.fillText("Percentage (%)", 0, 0);
-         ctx.restore();
-         }});
-                  var ctx = document.getElementById("chartHTMLReportGenerator8").getContext("2d");
+                  var ctx = document.getElementById("chartHTMLReportGenerator11").getContext("2d");
                   var data ={
            "labels":[
-             "07:00 AM",
-             "08:00 AM",
-             "09:00 AM",
-             "10:00 AM"
+             "10:00 AM",
+             "11:00 AM",
+             "12:00 PM",
+             "01:00 PM"
            ],
            "datasets":[
              {
                "label":"precipProbability",
-               "strokeColor":"rgba(0,0,255,1)",
-               "fillColor":"rgba(0,0,255,0.5)",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
+                 0,
                  1.0,
-                 1.0,
-                 1.0,
-                 1.0
+                 0,
+                 0
                ]
              },
              {
                "label":"humidity",
-               "strokeColor":"rgba(40,177,255,1)",
-               "fillColor":"rgba(40,177,255,0.5)",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
                  44.0,
                  41.0,
-                 36.0,
-                 31.0
+                 40.0,
+                 40.0
                ]
              },
              {
                "label":"cloudCover",
-               "strokeColor":"rgba(233,37,255,1)",
-               "fillColor":"rgba(233,37,255,0.5)",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
+                 6.0,
+                 8.0,
                  7.000000000000001,
-                 8.0,
-                 8.0,
-                 12.0
+                 6.0
                ]
              }
            ]
          };
-                  var options = { responsive:true,
-                  				  multiTooltipTemplate: "<%=datasetLabel%> : <%= value %>",
-                    			      legendTemplate : '<% for (var i=0; i<datasets.length; i++) { %><div style=\"background-color:<%=datasets[i].fillColor%>;width:25px;height:25px;border-style:solid;border-color:<%=datasets[i].strokeColor%>;margin:5px\"><span style="color:rgba(0,0,0,0)">____</span><span><small><% if (datasets[i].label) { %><%= datasets[i].label %><% } %></small></span></div><% } %>'
-                                   };
-                  var MyNewChart = new Chart(ctx).BarAlt(data,options);
-                  document.getElementById("legend_chartHTMLReportGenerator8").innerHTML=MyNewChart.generateLegend();
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
                </script>
-               <div id="mapHTMLReportGenerator9" style="width:100%;height:500px;"></div>
-               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
-                        <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
+               <div id="mapHTMLReportGenerator12" style="width:100%;height:500px;"></div>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+                        <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
                <script>
-                  var map = L.map('mapHTMLReportGenerator9').setView([49, -123], 13);
+                  var map = L.map('mapHTMLReportGenerator12').setView([0, 0], 3);
                               L.esri.basemapLayer("Topographic").addTo(map);
-                  var layer=L.geoJson([
+                  var layer = L.geoJson(
+                     [
            {
              "type":"Feature",
              "properties":{
@@ -779,8 +1180,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.04119,
+                 50.934702
                ]
              }
            },
@@ -793,8 +1194,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.04119,
+                 50.934702
                ]
              }
            },
@@ -807,8 +1208,8 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.04119,
+                 50.934702
                ]
              }
            },
@@ -821,13 +1222,360 @@
              "geometry":{
                "type":"Point",
                "coordinates":[
-                 -120.3417,
-                 50.6766
+                 -114.04119,
+                 50.934702
                ]
              }
            }
-         ],{onEachFeature: function (feature, layer) {layer.bindPopup(feature.properties.name);}, style:{"color": "rgb(255,0,0)"}}).addTo(map);
-                  map.fitBounds(layer, {maxZoom: 12});
+         ],
+                     {
+                         onEachFeature: function (feature, layer) {
+                             layer.bindPopup(feature.properties.popupContent);
+                         },
+                         style:{"color": "rgb(255,0,0)"}
+                     }).addTo(map);
+                  map.fitBounds(layer.getBounds());
+               </script>
+         <hr style="border-width:5px ">
+      </div>
+      <div style="padding:10px;border: 1px none black">
+         <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
+         <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
+         Last Run: July 24, 2019 at 22:59</p>
+         <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/205760746">Game vs. Airdrie FC - Airdrie Monklands NW</a></H1>
+               <H4 style="color:rgb(0,0,0)" class="text-center">2019-07-30T00:15:00Z til 2019-07-30T02:15:00Z</H4>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Forecast Time</th>
+                        <th>Summary</th>
+                        <th>Temperture (°C)</th>
+                        <th>Feels Like (°C)</th>
+                        <th>POP (%)</th>
+                        <th>Humidity (%)</th>
+                        <th>UV</th>
+                        <th>Wind (km/hr)</th>
+                        <th>Wind Dir.</th>
+                        <th>Cloud Cover (%)</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>05:00 PM</td>
+                        <td>Mostly Cloudy</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>1.0</td>
+                        <td>44.0</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>None</td>
+                        <td>68.0</td>
+                     </tr>
+                     <tr>
+                        <td>06:00 PM</td>
+                        <td>Mostly Cloudy</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>1.0</td>
+                        <td>43.0</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>None</td>
+                        <td>50.0</td>
+                     </tr>
+                     <tr>
+                        <td>07:00 PM</td>
+                        <td>Partly Cloudy</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>1.0</td>
+                        <td>45.0</td>
+                        <td>1</td>
+                        <td>9</td>
+                        <td>None</td>
+                        <td>33.0</td>
+                     </tr>
+                     <tr>
+                        <td>08:00 PM</td>
+                        <td>Partly Cloudy</td>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>2.0</td>
+                        <td>50.0</td>
+                        <td>0</td>
+                        <td>9</td>
+                        <td>None</td>
+                        <td>14.000000000000002</td>
+                     </tr>
+                     <tr>
+                        <td>09:00 PM</td>
+                        <td>Clear</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>2.0</td>
+                        <td>55.00000000000001</td>
+                        <td>0</td>
+                        <td>8</td>
+                        <td>None</td>
+                        <td>2.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator13"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator13").getContext("2d");
+                  var data ={
+           "labels":[
+             "05:00 PM",
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM",
+             "09:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"apparentTemperature",
+               "borderColor":"rgba(92,0,141,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(92,0,141,1)",
+               "backgroundColor":"rgba(92,0,141,0)",
+               "data":[
+                 "23",
+                 "23",
+                 "23",
+                 "21",
+                 "20"
+               ]
+             },
+             {
+               "label":"temperature",
+               "borderColor":"rgba(252,49,18,1)",
+               "borderWidth":2,
+               "pointColor":"rgba(252,49,18,1)",
+               "backgroundColor":"rgba(252,49,18,0)",
+               "data":[
+                 "23",
+                 "23",
+                 "23",
+                 "21",
+                 "20"
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Temp (C)', display: true},
+                             ticks: {
+                                 beginAtZero: false
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'line',
+                     data: data,
+                     options: options
+                  });
+               </script>
+               </style>
+               <div class="container-fluid">
+               	<div class="row">
+               		<div class="col-xs-8" style="text-align:center"><canvas id="chartHTMLReportGenerator14"></canvas></div>
+               	</div>
+               </div>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+               <script>
+                  var ctx = document.getElementById("chartHTMLReportGenerator14").getContext("2d");
+                  var data ={
+           "labels":[
+             "05:00 PM",
+             "06:00 PM",
+             "07:00 PM",
+             "08:00 PM",
+             "09:00 PM"
+           ],
+           "datasets":[
+             {
+               "label":"precipProbability",
+               "borderColor":"rgba(0,0,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(0,0,255,0.5)",
+               "data":[
+                 1.0,
+                 1.0,
+                 1.0,
+                 2.0,
+                 2.0
+               ]
+             },
+             {
+               "label":"humidity",
+               "borderColor":"rgba(40,177,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(40,177,255,0.5)",
+               "data":[
+                 44.0,
+                 43.0,
+                 45.0,
+                 50.0,
+                 55.00000000000001
+               ]
+             },
+             {
+               "label":"cloudCover",
+               "borderColor":"rgba(233,37,255,1)",
+               "borderWidth":2,
+               "backgroundColor":"rgba(233,37,255,0.5)",
+               "data":[
+                 68.0,
+                 50.0,
+                 33.0,
+                 14.000000000000002,
+                 2.0
+               ]
+             }
+           ]
+         };
+                  var options = {
+                     legend: {
+                         position: 'right'
+                     },
+                     scales: {
+                         xAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Date/Time', display: true},
+                             ticks: {
+                                 autoSkip: false
+                             }
+                         }],
+                         yAxes: [{
+                             display: true,
+                             scaleLabel: {labelString: 'Percentage (%)', display: true},
+                             ticks: {
+                                 beginAtZero: true
+                             }
+                         }]
+                     },
+                     tooltips: {
+                         mode: 'index'
+                     }
+                  };
+                  var MyNewChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: data,
+                     options: options
+                  });
+               </script>
+               <div id="mapHTMLReportGenerator15" style="width:100%;height:500px;"></div>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+                        <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
+               <script>
+                  var map = L.map('mapHTMLReportGenerator15').setView([0, 0], 3);
+                              L.esri.basemapLayer("Topographic").addTo(map);
+                  var layer = L.geoJson(
+                     [
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.038398,
+                 51.293763
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.038398,
+                 51.293763
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.038398,
+                 51.293763
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.038398,
+                 51.293763
+               ]
+             }
+           },
+           {
+             "type":"Feature",
+             "properties":{
+               "name":"None",
+               "popupContent":"None"
+             },
+             "geometry":{
+               "type":"Point",
+               "coordinates":[
+                 -114.038398,
+                 51.293763
+               ]
+             }
+           }
+         ],
+                     {
+                         onEachFeature: function (feature, layer) {
+                             layer.bindPopup(feature.properties.popupContent);
+                         },
+                         style:{"color": "rgb(255,0,0)"}
+                     }).addTo(map);
+                  map.fitBounds(layer.getBounds());
                </script>
          <hr style="border-width:5px ">
       </div>
