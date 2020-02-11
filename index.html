@@ -9,7 +9,7 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
          <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
-         Last Run: February 11, 2020 at 03:05</p>
+         Last Run: February 11, 2020 at 04:05</p>
          <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/218569622">Practice - SWU Complex</a></H1>
                <H4 style="color:rgb(0,0,0)" class="text-center">2020-02-11T03:30:00Z til 2020-02-11T05:00:00Z</H4>
                <table class="table table-striped">
@@ -29,18 +29,6 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>08:00 PM</td>
-                        <td>Clear</td>
-                        <td>-8</td>
-                        <td>-13</td>
-                        <td>0</td>
-                        <td>78.0</td>
-                        <td>0</td>
-                        <td>10</td>
-                        <td>None</td>
-                        <td>8.0</td>
-                     </tr>
-                     <tr>
                         <td>09:00 PM</td>
                         <td>Clear</td>
                         <td>-8</td>
@@ -50,19 +38,19 @@
                         <td>0</td>
                         <td>10</td>
                         <td>None</td>
-                        <td>16.0</td>
+                        <td>10.0</td>
                      </tr>
                      <tr>
                         <td>10:00 PM</td>
-                        <td>Partly Cloudy</td>
+                        <td>Clear</td>
                         <td>-7</td>
                         <td>-12</td>
-                        <td>1.0</td>
+                        <td>0</td>
                         <td>76.0</td>
                         <td>0</td>
-                        <td>10</td>
+                        <td>11</td>
                         <td>None</td>
-                        <td>34.0</td>
+                        <td>20.0</td>
                      </tr>
                   </tbody>
                </table>
@@ -77,7 +65,6 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
-             "08:00 PM",
              "09:00 PM",
              "10:00 PM"
            ],
@@ -90,7 +77,6 @@
                "backgroundColor":"rgba(92,0,141,0)",
                "data":[
                  "-13",
-                 "-13",
                  "-12"
                ]
              },
@@ -101,7 +87,6 @@
                "pointColor":"rgba(252,49,18,1)",
                "backgroundColor":"rgba(252,49,18,0)",
                "data":[
-                 "-8",
                  "-8",
                  "-7"
                ]
@@ -149,7 +134,6 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
-             "08:00 PM",
              "09:00 PM",
              "10:00 PM"
            ],
@@ -160,9 +144,8 @@
                "borderWidth":2,
                "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 0,
                  1.0,
-                 1.0
+                 0
                ]
              },
              {
@@ -171,7 +154,6 @@
                "borderWidth":2,
                "backgroundColor":"rgba(40,177,255,0.5)",
                "data":[
-                 78.0,
                  78.0,
                  76.0
                ]
@@ -182,9 +164,8 @@
                "borderWidth":2,
                "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 8.0,
-                 16.0,
-                 34.0
+                 10.0,
+                 20.0
                ]
              }
            ]
@@ -228,20 +209,6 @@
                               L.esri.basemapLayer("Topographic").addTo(map);
                   var layer = L.geoJson(
                      [
-           {
-             "type":"Feature",
-             "properties":{
-               "name":"None",
-               "popupContent":"None"
-             },
-             "geometry":{
-               "type":"Point",
-               "coordinates":[
-                 -113.9442,
-                 50.9705
-               ]
-             }
-           },
            {
              "type":"Feature",
              "properties":{
