@@ -9,7 +9,7 @@
       <div style="padding:10px;border: 1px none black">
          <p style="color:rgb(140,140,140)" class="text-center"><a href = "https://darksky.net/poweredby/">
          <img class="img-responsive center-block" src="https://darksky.net/dev/img/attribution/poweredby-oneline.png" alt="" width="180"></a>
-         Last Run: October 24, 2020 at 01:05</p>
+         Last Run: October 24, 2020 at 02:05</p>
          <H1 class="text-center"><a href  = "https://go.teamsnap.com/282250/schedule/view_game/233388055">Practice - SWU Complex</a></H1>
                <H4 style="color:rgb(0,0,0)" class="text-center">2020-10-24T02:00:00Z til 2020-10-24T03:15:00Z</H4>
                <table class="table table-striped">
@@ -29,23 +29,11 @@
                   </thead>
                   <tbody>
                      <tr>
-                        <td>06:00 PM</td>
-                        <td>Foggy</td>
-                        <td>-9</td>
-                        <td>-14</td>
-                        <td>19.0</td>
-                        <td>90.0</td>
-                        <td>0</td>
-                        <td>11</td>
-                        <td>None</td>
-                        <td>100</td>
-                     </tr>
-                     <tr>
                         <td>07:00 PM</td>
                         <td>Foggy</td>
                         <td>-9</td>
                         <td>-15</td>
-                        <td>20.0</td>
+                        <td>21.0</td>
                         <td>90.0</td>
                         <td>0</td>
                         <td>12</td>
@@ -57,7 +45,7 @@
                         <td>Foggy</td>
                         <td>-10</td>
                         <td>-16</td>
-                        <td>17.0</td>
+                        <td>18.0</td>
                         <td>90.0</td>
                         <td>0</td>
                         <td>13</td>
@@ -68,11 +56,11 @@
                         <td>09:00 PM</td>
                         <td>Foggy</td>
                         <td>-10</td>
-                        <td>-16</td>
-                        <td>20.0</td>
-                        <td>90.0</td>
+                        <td>-17</td>
+                        <td>17.0</td>
+                        <td>89.0</td>
                         <td>0</td>
-                        <td>13</td>
+                        <td>14</td>
                         <td>None</td>
                         <td>100</td>
                      </tr>
@@ -89,7 +77,6 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator1").getContext("2d");
                   var data ={
            "labels":[
-             "06:00 PM",
              "07:00 PM",
              "08:00 PM",
              "09:00 PM"
@@ -102,10 +89,9 @@
                "pointColor":"rgba(92,0,141,1)",
                "backgroundColor":"rgba(92,0,141,0)",
                "data":[
-                 "-14",
                  "-15",
                  "-16",
-                 "-16"
+                 "-17"
                ]
              },
              {
@@ -115,7 +101,6 @@
                "pointColor":"rgba(252,49,18,1)",
                "backgroundColor":"rgba(252,49,18,0)",
                "data":[
-                 "-9",
                  "-9",
                  "-10",
                  "-10"
@@ -164,7 +149,6 @@
                   var ctx = document.getElementById("chartHTMLReportGenerator2").getContext("2d");
                   var data ={
            "labels":[
-             "06:00 PM",
              "07:00 PM",
              "08:00 PM",
              "09:00 PM"
@@ -176,10 +160,9 @@
                "borderWidth":2,
                "backgroundColor":"rgba(0,0,255,0.5)",
                "data":[
-                 19.0,
-                 20.0,
-                 17.0,
-                 20.0
+                 21.0,
+                 18.0,
+                 17.0
                ]
              },
              {
@@ -190,8 +173,7 @@
                "data":[
                  90.0,
                  90.0,
-                 90.0,
-                 90.0
+                 89.0
                ]
              },
              {
@@ -200,7 +182,6 @@
                "borderWidth":2,
                "backgroundColor":"rgba(233,37,255,0.5)",
                "data":[
-                 100,
                  100,
                  100,
                  100
@@ -247,20 +228,6 @@
                               L.esri.basemapLayer("Topographic").addTo(map);
                   var layer = L.geoJson(
                      [
-           {
-             "type":"Feature",
-             "properties":{
-               "name":"None",
-               "popupContent":"None"
-             },
-             "geometry":{
-               "type":"Point",
-               "coordinates":[
-                 -113.9442,
-                 50.9705
-               ]
-             }
-           },
            {
              "type":"Feature",
              "properties":{
